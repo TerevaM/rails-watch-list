@@ -12,6 +12,18 @@
   </head>
 
   <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 position-sticky sticky-top">
+  <%= link_to 'My lists', lists_path %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse right-0" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <%= link_to 'My lists', lists_path %>
+      <%= link_to 'New list', new_list_path %>
+    </ul>
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>

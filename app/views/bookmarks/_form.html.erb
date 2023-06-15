@@ -1,0 +1,6 @@
+<%= simple_form_for  [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie, label_method: :title, value_method: :id %>
+  <%= f.input :list_id, as: :hidden, input_html: { value: params["list_id"] } %>
+  <%= f.button :submit %>
+<% end %>
