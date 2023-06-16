@@ -1,3 +1,9 @@
+body {
+  background-image: url('https://wallpapercave.com/wp/wp4016022.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 .bck_lists {
   height: 350px;
@@ -7,38 +13,37 @@
   font-weight: bold;
 }
 
-body {
-  background-image: url('https://wallpapercave.com/wp/wp4016022.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
+$width_card: 250px;
 
 .lists {
   display: grid;
-  justify-content: space-evenly;
-  padding: 20px !important;
-  min-height: 100vh;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, $width_card);
   background-color: rgba(28, 28, 28, 0.215);
-  gap: 10px;
-  grid-template-columns: repeat(3, 300px);
-  .card {
-    width: 300px;
-    height: 100px;
-    box-shadow: 2px 2px 4px black;
+  gap: 20px;
+  .card_list {
+    backdrop-filter: blur(10px);
+    border: 1px solid black;
+    box-shadow: 1px 1px 4px black;
     transition: all 0.5s;
     a {
-      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $width_card;
+      height: 100px;
+      color: white;
       text-decoration: none;
       font-size: 20px;
+      transition: all 0.5s;
     }
-  }
-  .card:hover {
-    background-color: black;
-    box-shadow: 2px 2px 4px white;
-    transition: all 0.5s;
-    a {
-      color: white;
+    a:hover {
+      color: black;
+      transition: 0.5s all;
+    }
+    :not(a:hover) {
+      color: grey;
+      transition: 0.5s all;
     }
   }
 }

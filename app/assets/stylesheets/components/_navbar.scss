@@ -1,12 +1,14 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+.logo_nav {
+  background-image: url('https://www.pngmart.com/files/3/Popcorn-PNG-Transparent-Image.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 40px;
+  height: 40px;
+  transition: 0.5s all;
+}
+
+.logo_nav:hover {
+  transform: rotate(20deg);
+  transition: 0.5s all;
 }
